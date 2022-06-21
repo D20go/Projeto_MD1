@@ -12,9 +12,9 @@ def resultado(usuario, exame=None, diaEhora=None, agend=None):
     while(continuar):
         result = random.randrange(1, 3)
         escolha = int(input(
-            "Deseja ver o resultado do exame ou do agendamento?\nEscolha [1] para Exame ou [2] para Agendamento: "))
+            "Deseja ver o resultado do exame ou do agendamento caro cliente?\nEscolha:\n[1] para Exame\n[2] para Agendamento\n[3] para retornar\n "))
         if (escolha == 1):  # Vai verificar o resultado do Exame
-            if (exame == 1):  # Exame de hemograma,coloquei 3 opções aleatórias
+            if (exame == 1):  # Exame de hemograma,coloquei 3 opções aleatórias para serem escolhidas de maneira aleatória com o "random"
                 if (result == 1):
                     print(f"{usuario} indivíduo está saudável.")
                 elif (result == 2):
@@ -40,12 +40,8 @@ def resultado(usuario, exame=None, diaEhora=None, agend=None):
                         f"{usuario} tem uma quantidade de açucar alta/alarmável no sangue.")
             else:
                 print("Nenhum exame ou consulta encontrada.")
-        if(escolha == 2):  # Vai verificar or resultado do Agendamento
-            # Se agenda tem valor True,quer dizer que foi feito um agendamento no dia tal.
+        elif(escolha == 2):  # Vai verificar or resultado do Agendamento
             if (diaEhora != None):
-                # diaEhora = str(diaEhora)
-                # diaEhora = diaEhora.replace("(", "")
-                # diaEhora = diaEhora.replace(")", "")
                 if (agend == 1):
                     if(diaEhora[1] == 1):
                         print(
@@ -68,6 +64,13 @@ def resultado(usuario, exame=None, diaEhora=None, agend=None):
                             f"Seu exame está marcado para o dia {diaEhora[0]}, 14:10h.")
             else:
                 print("Sem Consulta ou Exame marcado.")
+        elif(escolha == 3):
+            print("Voltando para o Menu Principal...")
+            break
+        else :
+            print("Opção inválida,tente novamente...")
+            continue
+        # Abaixo,caso o usuário ja tenha visto o resultado do agendamento ou do exame,será perguntado se deseja continuar
         opcao = int(input("Deseja continuar?\n[1]Sim\n[2]Não\n"))
         while(True):
             if (opcao == 1):
