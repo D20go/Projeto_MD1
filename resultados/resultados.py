@@ -7,28 +7,28 @@ import random
 # hr3 = '14:10h'
 
 
-def resultado(usuario, exame=None, diaEhora=None, agend=None):
+def resultado(usuario, diaEhoraC=None , diaEhoraE = None):
     continuar = True
     while(continuar):
         result = random.randrange(1, 3)
         escolha = int(input(
-            "Deseja ver o resultado do exame ou do agendamento caro cliente?\nEscolha:\n[1] para Exame\n[2] para Agendamento\n[3] para retornar\n "))
+            "Deseja ver o resultado do exame ou do agendamento caro cliente?\nEscolha:\n[1] para Exame\n[2] para Agendamento\n[3] para retornar ao Menu Principal\n "))
         if (escolha == 1):  # Vai verificar o resultado do Exame
-            if (exame == 1):  # Exame de hemograma,coloquei 3 opções aleatórias para serem escolhidas de maneira aleatória com o "random"
+            if (diaEhoraE[3] == 1):  # Exame de hemograma,coloquei 3 opções aleatórias para serem escolhidas de maneira aleatória com o "random"
                 if (result == 1):
                     print(f"{usuario} indivíduo está saudável.")
                 elif (result == 2):
                     print(f"{usuario} tem um excesso de gordura no sangue.")
                 elif (result == 3):
                     print(f"{usuario} está com uma falta de ferro no sangue.")
-            elif (exame == 2):  # Exame Parasitológico
+            elif (diaEhoraE[3] == 2):  # Exame Parasitológico
                 if (result == 1):
                     print(f"{usuario} está saudável.")
                 elif (result == 2):
                     print(f"{usuario} está com vermes no intestino.")
                 elif (result == 3):
                     print(f"{usuario} está com vermes na garganta.")
-            elif (exame == 3):  # Exame Glicêmico
+            elif (diaEhoraE[3] == 3):  # Exame Glicêmico
                 if (result == 1):
                     print(
                         f"{usuario} tem uma quantidade de açucar baixa/média no sangue.")
@@ -41,27 +41,37 @@ def resultado(usuario, exame=None, diaEhora=None, agend=None):
             else:
                 print("Nenhum exame ou consulta encontrada.")
         elif(escolha == 2):  # Vai verificar or resultado do Agendamento
-            if (diaEhora != None):
-                if (agend == 1):
-                    if(diaEhora[1] == 1):
-                        print(
-                            f"Sua consulta está marcada para o dia {diaEhora[0]},10:30h.")
-                    elif(diaEhora[1] == 2):
-                        print(
-                            f"Sua consulta está marcada para o dia {diaEhora[0]}, 12:45h.")
-                    elif(diaEhora[1] == 3):
-                        print(
-                            f"Sua consulta está marcada para o dia {diaEhora[0]}, 14:10h.")
-                elif(agend == 2):
-                    if(diaEhora[1] == 1):
-                        print(
-                            f"Seu exame está marcado para o dia {diaEhora[0]},10:30h.")
-                    elif(diaEhora[1] == 2):
-                        print(
-                            f"Seu exame está marcado para o dia {diaEhora[0]}, 12:45h.")
-                    elif(diaEhora[1] == 3):
-                        print(
-                            f"Seu exame está marcado para o dia {diaEhora[0]}, 14:10h.")
+            if ((diaEhoraC != None) or (diaEhoraE != None)):
+                while(True):
+                    verifica = int(input("Deseja verificar o agendamento da Consulta ou do Exame?\n[1]Consulta\n[2]Exame\n"))
+                    if (verifica == 1):
+                        if(diaEhoraC[2] == 1):
+                            print(
+                                f"Sua consulta está marcada para o dia {diaEhoraC[1]} de Julho,10:30h.")
+                            break
+                        elif(diaEhoraC[2] == 2):
+                            print(
+                                f"Sua consulta está marcada para o dia {diaEhoraC[1]} de Julho, 12:45h.")
+                            break
+                        elif(diaEhoraC[2] == 3):
+                            print(
+                                f"Sua consulta está marcada para o dia {diaEhoraC[1]} de Julho, 14:10h.")
+                            break
+                    elif(verifica == 2):
+                        if(diaEhoraE[2] == 1):
+                            print(
+                                f"Seu exame está marcado para o dia {diaEhoraE[1]} de Julho,10:30h.")
+                            break
+                        elif(diaEhoraE[2] == 2):
+                            print(
+                                f"Seu exame está marcado para o dia {diaEhoraE[1]} de Julho, 12:45h.")
+                            break
+                        elif(diaEhoraE[2] == 3):
+                            print(
+                                f"Seu exame está marcado para o dia {diaEhoraE[1]} de Julho, 14:10h.")
+                            break
+                    else:
+                        print ("Escolha inválida!\nTente novamente...")
             else:
                 print("Sem Consulta ou Exame marcado.")
         elif(escolha == 3):
@@ -76,6 +86,7 @@ def resultado(usuario, exame=None, diaEhora=None, agend=None):
             if (opcao == 1):
                 break
             elif(opcao == 2):
+                print("Voltando para o Menu Principal...")
                 continuar = False
                 break
             else:
@@ -83,6 +94,5 @@ def resultado(usuario, exame=None, diaEhora=None, agend=None):
                     opcao = int(
                         input("Opção inválida,escolha [1] para Sim ou [2] para Não:\n"))
 
-
 if(__name__ == "__main__"):
-    resultado("Ronald Mc Donald", 1, (3,2), 2)  # Falta colocar o mês ...
+    resultado("Ronald Mc Donald", (1,2,1,1),(2,3,3,1))  # Falta colocar o mês ...
