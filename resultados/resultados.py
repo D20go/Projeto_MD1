@@ -7,14 +7,15 @@ import random
 # hr3 = '14:10h'
 
 
-def resultado(usuario, diaEhoraC=None , diaEhoraE = None):
+def resultado(usuario, diaEhoraC=None, diaEhoraE=None):
     continuar = True
     while(continuar):
         result = random.randrange(1, 3)
         escolha = int(input(
             "Deseja ver o resultado do exame ou do agendamento caro cliente?\nEscolha:\n[1] para Exame\n[2] para Agendamento\n[3] para retornar ao Menu Principal\n "))
         if (escolha == 1):  # Vai verificar o resultado do Exame
-            if (diaEhoraE[3] == 1):  # Exame de hemograma,coloquei 3 opções aleatórias para serem escolhidas de maneira aleatória com o "random"
+            # Exame de hemograma,coloquei 3 opções aleatórias para serem escolhidas de maneira aleatória com o "random"
+            if (diaEhoraE[3] == 1):
                 if (result == 1):
                     print(f"{usuario} indivíduo está saudável.")
                 elif (result == 2):
@@ -41,13 +42,14 @@ def resultado(usuario, diaEhoraC=None , diaEhoraE = None):
             else:
                 print("Nenhum exame ou consulta encontrada.")
         elif(escolha == 2):  # Vai verificar or resultado do Agendamento
-            if ((diaEhoraC != None) or (diaEhoraE != None)):
-                while(True):
-                    verifica = int(input("Deseja verificar o agendamento da Consulta ou do Exame?\n[1]Consulta\n[2]Exame\n"))
-                    if (verifica == 1):
+            while(True):
+                verifica = int(input(
+                    "Deseja verificar o agendamento da Consulta ou do Exame?\n[1]Consulta\n[2]Exame\n"))
+                if (verifica == 1):
+                    if (diaEhoraC != None):
                         if(diaEhoraC[2] == 1):
                             print(
-                                f"Sua consulta está marcada para o dia {diaEhoraC[1]} de Julho,10:30h.")
+                                f"Sua consulta está marcada para o dia {diaEhoraC[1]} de Julho, 10:30h.")
                             break
                         elif(diaEhoraC[2] == 2):
                             print(
@@ -57,10 +59,13 @@ def resultado(usuario, diaEhoraC=None , diaEhoraE = None):
                             print(
                                 f"Sua consulta está marcada para o dia {diaEhoraC[1]} de Julho, 14:10h.")
                             break
-                    elif(verifica == 2):
+                    else:
+                        print("Sem consulta marcada.")
+                elif(verifica == 2):
+                    if(diaEhoraE != None):
                         if(diaEhoraE[2] == 1):
                             print(
-                                f"Seu exame está marcado para o dia {diaEhoraE[1]} de Julho,10:30h.")
+                                f"Seu exame está marcado para o dia {diaEhoraE[1]} de Julho, 10:30h.")
                             break
                         elif(diaEhoraE[2] == 2):
                             print(
@@ -71,13 +76,13 @@ def resultado(usuario, diaEhoraC=None , diaEhoraE = None):
                                 f"Seu exame está marcado para o dia {diaEhoraE[1]} de Julho, 14:10h.")
                             break
                     else:
-                        print ("Escolha inválida!\nTente novamente...")
-            else:
-                print("Sem Consulta ou Exame marcado.")
+                        print("Sem exame marcado.")
+                else:
+                    print("Escolha inválida!\nTente novamente...")
         elif(escolha == 3):
             print("Voltando para o Menu Principal...")
             break
-        else :
+        else:
             print("Opção inválida,tente novamente...")
             continue
         # Abaixo,caso o usuário ja tenha visto o resultado do agendamento ou do exame,será perguntado se deseja continuar
@@ -94,5 +99,7 @@ def resultado(usuario, diaEhoraC=None , diaEhoraE = None):
                     opcao = int(
                         input("Opção inválida,escolha [1] para Sim ou [2] para Não:\n"))
 
+
 if(__name__ == "__main__"):
-    resultado("Ronald Mc Donald", (1,2,1,1),(2,3,3,1))  # Falta colocar o mês ...
+    # Argumento passado é (Número 1 ou 2 dizendo se é parâmetro do Consulta ou Exame,data,hora,Tipo de exame)
+    resultado("Ronald Mc Donald", (1, 2, 1, 1), (2, 3, 3, 1))
