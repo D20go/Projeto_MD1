@@ -49,15 +49,15 @@ def resultado(usuario, diaEhoraC=None, diaEhoraE=None):
                     if (diaEhoraC != None):
                         if(diaEhoraC[2] == 1):
                             print(
-                                f"Sua consulta está marcada para o dia {diaEhoraC[1]} de Julho, 10:30h.")
+                                f"Sua consulta está marcada para o dia {diaEhoraC[1]} de Julho, 12:00h.")
                             break
                         elif(diaEhoraC[2] == 2):
                             print(
-                                f"Sua consulta está marcada para o dia {diaEhoraC[1]} de Julho, 12:45h.")
+                                f"Sua consulta está marcada para o dia {diaEhoraC[1]} de Julho, 13:30h.")
                             break
                         elif(diaEhoraC[2] == 3):
                             print(
-                                f"Sua consulta está marcada para o dia {diaEhoraC[1]} de Julho, 14:10h.")
+                                f"Sua consulta está marcada para o dia {diaEhoraC[1]} de Julho, 16:15h.")
                             break
                     else:
                         print("Sem consulta marcada.")
