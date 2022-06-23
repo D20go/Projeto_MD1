@@ -17,7 +17,7 @@ width="700px"/>
 ## Descrição do Projeto 📝
 O projeto piloto devidamente referendado visa automatizar processos operacionais que ainda ocorrem de forma presencial em muitas Unidades Básicas de Saúde (UBS). Dessa forma, o objetivo do Chatbot Atende Mais é melhorar a experiência de nossos pacientes nessa fase tão delicada e importante da vida, prestando um melhor atendimento.
 
-Este projeto foi elaborado por estudantes da Instituição [Resilia](https://www.resilia.work/)), em colaboração dos facilitadores Esli Queiroz (Soft) e Marisa Silva (Tech). Deixamos aqui nossos profundos e sinceros agradecimentos por essa etapa concluída de final de primeiro módulo. 
+Este projeto foi elaborado por estudantes da Instituição [Resilia](https://www.resilia.work/), em colaboração dos facilitadores Esli Queiroz (Soft) e Marisa Silva (Tech). Deixamos aqui nossos profundos e sinceros agradecimentos por essa etapa concluída de final de primeiro módulo. 
 ## Status do Projeto  ✅
  
   <div><h4 align="center"> Chatbot Atende Ma<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/80/heavy-plus-sign_2795.png" width= "15px">S Concluído ✔️ </h4></div>
@@ -57,7 +57,7 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 
 
 ## Desenvolvedores 💖
-Esses abaixo ,foram os idealizadores e desenvolvedores do projeto.Para mais informações acesse o LinkedIn ou o GitHub correspondente.
+Esses abaixo, foram os idealizadores e desenvolvedores do projeto. Para mais informações acesse o LinkedIn ou o GitHub correspondente.
 ### Bárbara
 - [LinkedIn](https://www.linkedin.com/in/barbara-avelar/)
 - [GitHub](https://github.com/barbaraavs)
