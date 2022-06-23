@@ -58,15 +58,15 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 
 ## Desenvolvedores 💖
 Esses abaixo, foram os idealizadores e desenvolvedores do projeto. Para mais informações acesse o LinkedIn ou o GitHub correspondente.
-### Bárbara
+### Bárbara Avelar
 - [LinkedIn](https://www.linkedin.com/in/barbara-avelar/)
 - [GitHub](https://github.com/barbaraavs)
 ### Dayane Brito
 - [LinkedIn](https://www.linkedin.com/in/dayane-brito-15a238204/)
 - [GitHub](https://github.com/DayBrito)
-### Diego
+### Diego Souza
 - [LinkedIn](https://www.linkedin.com/in/diego-sousa-ferreira-b9641b242/)
 - [GitHub](https://github.com/D20go)
-### Érick 
+### Érick Vieira
 - [LinkedIn](https://www.linkedin.com/in/erick-vieira-data-analytics/)
 - [GitHub](https://github.com/XxMeckxX)
