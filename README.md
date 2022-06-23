@@ -64,7 +64,7 @@ Esses abaixo, foram os idealizadores e desenvolvedores do projeto. Para mais inf
 ### Dayane Brito
 - [LinkedIn](https://www.linkedin.com/in/dayane-brito-15a238204/)
 - [GitHub](https://github.com/DayBrito)
-### Diego Souza
+### Diego Sousa
 - [LinkedIn](https://www.linkedin.com/in/diego-sousa-ferreira-b9641b242/)
 - [GitHub](https://github.com/D20go)
 ### Érick Vieira
