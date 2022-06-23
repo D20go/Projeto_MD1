@@ -13,4 +13,3 @@ def fim_programa():
         print(f'\nAgradecemos seu contato. O Atende + te deseja um bom dia.\n') 
         exit()
         
-fim_programa()

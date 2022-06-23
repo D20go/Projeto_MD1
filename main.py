@@ -255,11 +255,22 @@ while check == 0:
 
         def resultado():
             result = random.randrange(1, 3)
-            escolha = int(input("\nDeseja ver o resultado do exame ou do agendamento?\n\n1 - Exame \n2 - Agendamento \n3 - Voltar ao menu principal \n\nDigite aqui: "))
+            escolha = input("\nDeseja ver o resultado do exame ou do agendamento?\n\n1 - Exame \n2 - Agendamento \n3 - Voltar ao menu principal \n\nDigite aqui: ")
+            
+            while not escolha.isdigit():
+                escolha = input('\nEntrada inválida. Deseja ver o resultado do exame ou do agendamento?\n\n1 - Exame \n2 - Agendamento \n3 - Voltar ao menu principal \n\nDigite aqui: ')
+                    
+            escolha = int(escolha)
             
             if (escolha == 1):  
                 
-                resultado_exame = int(input(f'\n\nDeseja ver o resultado para qual exame? \n\n1 - Hemograma \n2 - Parasitológico \n3 - Teste Glicêmico \n\nDigite aqui: '))
+                resultado_exame = input(f'\n\nDeseja ver o resultado para qual exame? \n\n1 - Hemograma \n2 - Parasitológico \n3 - Teste Glicêmico \n\nDigite aqui: ')
+                
+                while not resultado_exame.isdigit():
+                    resultado_exame = input('\nEntrada inválida. Deseja ver o resultado para qual exame? \n\n1 - Hemograma \n2 - Parasitológico \n3 - Teste Glicêmico \n\nDigite aqui: ')
+                    
+                resultado_exame = int(resultado_exame)
+                
                 result_hemo = ['está saudável.', 'tem um excesso de gordura no sangue.', 'está com uma falta de ferro no sangue.']
                 result_para = ['está saudável.', 'está com vermes no intestino.', 'está com vermes na garganta.']
                 result_glic = ['tem uma quantidade de açucar baixa/média no sangue.', 'tem uma quantidade de açucar média/alta no sangue.', 'tem uma quantidade de açucar alta/alarmável no sangue.']
@@ -278,7 +289,12 @@ while check == 0:
                     f.fim_programa()
                     
             elif (escolha == 2): 
-                verifica = int(input("\nDeseja verificar o agendamento da Consulta ou do Exame? \n\n1 - Consulta \n2 - Exame \n3 - Voltar ao menu principal \n\nDigite aqui: "))
+                verifica = input("\nDeseja verificar o agendamento da Consulta ou do Exame? \n\n1 - Consulta \n2 - Exame \n3 - Voltar ao menu principal \n\nDigite aqui: ")
+                
+                while not verifica.isdigit():
+                    verifica = input('\nEntrada inválida. Deseja verificar o agendamento da Consulta ou do Exame? \n\n1 - Consulta \n2 - Exame \n3 - Voltar ao menu principal \n\nDigite aqui: ')
+                    
+                verifica = int(verifica)
                     
                 if (verifica == 1):     
                     escolha_usuario = random.randrange(1, 31)
@@ -310,16 +326,29 @@ while check == 0:
                 
         def exames():
             
-            exames = int(input(f'\nOlá {nome}! Selecione o exame desejado: \n\n1 - {ex1} \n2 - {ex2} \n3 - {ex3} \n\nDigite aqui: '))
+            exames = (input(f'\nOlá {nome}! Selecione o exame desejado: \n\n1 - {ex1} \n2 - {ex2} \n3 - {ex3} \n\nDigite aqui: '))
         
-            while (exames != 1) and (exames != 2) and (exames != 3):
-                exames = int(input(f'\nOpção inválida, {nome}. Digite o exame desejado: \n\n1 - {ex1} \n2 - {ex2} \n3 - {ex3} \n\nDigite aqui: '))
+            while not exames.isdigit():
+                    exames = input('\nEntrada inválida. Digite o exame desejado: \n\n1 - {ex1} \n2 - {ex2} \n3 - {ex3} \n\nDigite aqui: ')
+                    
+            exames = int(exames)
             
             if exames == 1:
                 print (f'\nVocê selecionou exame de {ex1}. Selecione entre as datas disponíveis: \n\n {calendar.month(aa,mm)}')
-                data = int(input('Digite um dia em formato dd: '))
+                data = input('Digite um dia em formato dd: ')
+                
+                while not data.isdigit():
+                    data = input('\nEntrada inválida. Digite um dia em formato dd: ')
+                    
+                data = int(data)
 
-                hora = int(input(f'\nEscolha uma opção de horário: \n\n1 - {hr1} \n2 - {hr2} \n3 - {hr3} \n\nDigite aqui: '))
+                hora = input(f'\nEscolha uma opção de horário: \n\n1 - {hr1} \n2 - {hr2} \n3 - {hr3} \n\nDigite aqui: ')
+                
+                while not hora.isdigit():
+                    hora = input('\nEntrada inválida. Escolha uma opção de horário: \n\n1 - {hr1} \n2 - {hr2} \n3 - {hr3} \n\nDigite aqui: ')
+                    
+                hora = int(hora)
+                
                 hora_dict = {1:'10:30h', 2:'12:45h', 3:'14:10h'}
                 
                 if hora == 1:
@@ -336,11 +365,20 @@ while check == 0:
                       
             elif exames == 2:
                 print (f'\nVocê selecionou exame de {ex2}. Selecione entre as datas disponíveis: \n\n {calendar.month(aa,mm)}')
-                data = int(input('Digite um dia em formato dd: '))
-                while (data < 1) or (data > 30):
-                    data = int(input('Dia inválido. Digite um dia em formato dd: '))
+                data = input('Digite um dia em formato dd: ')
+                
+                while not data.isdigit():
+                    data = input('\nEntrada inválida. Digite um dia em formato dd: ')
+                    
+                data = int(data)
 
                 hora = input(f'\nEscolha uma opção de horário: \n\n1 - {hr1} \n2 - {hr2} \n3 - {hr3} \n\nDigite aqui: ')
+                
+                while not hora.isdigit():
+                    hora = input('\nEntrada inválida. Escolha uma opção de horário: \n\n1 - {hr1} \n2 - {hr2} \n3 - {hr3} \n\nDigite aqui: ')
+                    
+                hora = int(hora)
+                
                 hora_dict = {1:'10:30h', 2:'12:45h', 3:'14:10h'}
 
                 if hora == 1:
@@ -357,11 +395,20 @@ while check == 0:
             
             elif exames == 3:
                 print (f'\nVocê selecionou exame de {ex3}. Selecione entre as datas disponíveis: \n\n {calendar.month(aa,mm)}')
-                data = int(input('Digite um dia em formato dd: '))
-                while (data < 1) or (data > 30):
-                    data = int(input('Dia inválido. Digite um dia em formato dd: '))
+                data = input('Digite um dia em formato dd: ')
+                
+                while not data.isdigit():
+                    data = input('\nEntrada inválida. Digite um dia em formato dd: ')
+                    
+                data = int(data)
 
                 hora = input(f'\nEscolha uma opção de horário: \n\n1 - {hr1} \n2 - {hr2} \n3 - {hr3} \n\nDigite aqui: ')
+                
+                while not hora.isdigit():
+                    hora = input('\nEntrada inválida. Escolha uma opção de horário: \n\n1 - {hr1} \n2 - {hr2} \n3 - {hr3} \n\nDigite aqui: ')
+                    
+                hora = int(hora)
+                
                 hora_dict = {1:'10:30h', 2:'12:45h', 3:'14:10h'}
 
                 if hora == 1:
