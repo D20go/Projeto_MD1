@@ -1,3 +1,8 @@
+ <div align="center">
+<img src = "https://i.pinimg.com/564x/3d/74/e5/3d74e5eedf6ac78dcea978aaa1917863.jpg"
+width="700px"/>
+</div>
+
 # ChatBot Atende ➕
 
 
@@ -32,3 +37,31 @@ while  not  start.isdigit():
 
 start  =  int(start)
 ```
+### Rodando o ChatBot Atende➕ 
+![enter image description here](https://i.pinimg.com/564x/f3/fb/a7/f3fba7dd922a916c303481a2d701d77e.jpg)
+
+
+## Ferramentas Utilizadas 🔧
+- [VsCode](https://code.visualstudio.com)
+- [Trello](https://trello.com/home)
+- [Git](https://git-scm.com)
+- [GitHub](https://github.com)
+- [GoogleAgendas](https://www.google.com/intl/pt-BR/calendar/about/)
+- [Python (Interpretador/Linguagem/Compilador)](https://www.python.org)
+- [Discord](https://discord.com)
+- [LinkTree](https://linktr.ee)
+- [Nodemon](https://nodemon.io/)
+
+## Desenvolvedores 💖
+### Bárbara
+- [LinkedIn](https://www.linkedin.com/in/barbara-avelar/)
+- [GitHub](https://github.com/barbaraavs)
+### Dayane Brito
+- [LinkedIn](https://www.linkedin.com/in/dayane-brito-15a238204/)
+- [GitHub](https://github.com/DayBrito)
+### Diego
+- [LinkedIn](https://www.linkedin.com/in/diego-sousa-ferreira-b9641b242/)
+- [GitHub](https://github.com/D20go)
+### Érick 
+- [LinkedIn](https://www.linkedin.com/in/erick-vieira-data-analytics/)
+- [GitHub](https://github.com/XxMeckxX)
