@@ -266,16 +266,16 @@ while check == 0:
                 
                 if (resultado_exame == 1):
                     print(f'\n{nome}, o resultado do seu Hemograma é: {random.choice(result_hemo)}')
-                    
-                        
+                    f.fim_programa()
                 elif (resultado_exame == 2): 
                     print(f'\n{nome}, o resultado do seu Exame Parasitológico é: {random.choice(result_para)}')
-                        
+                    f.fim_programa()
                 elif (resultado_exame == 3): 
                     print(f'\n{nome}, o resultado do seu Teste Gligêmico é: {random.choice(result_glic)}')
+                    f.fim_programa()
                 else:
                     print("Nenhum exame encontrado.")
-                    
+                    f.fim_programa()
                     
             elif (escolha == 2): 
                 verifica = int(input("\nDeseja verificar o agendamento da Consulta ou do Exame? \n\n1 - Consulta \n2 - Exame \n3 - Voltar ao menu principal \n\nDigite aqui: "))
@@ -283,11 +283,11 @@ while check == 0:
                 if (verifica == 1):     
                     escolha_usuario = random.randrange(1, 31)
                     print(f"\nSua consulta está marcada para o dia {escolha_usuario} de Julho, {random.randrange(8, 18)}:{random.randrange(00, 59)} h.")
-                        
+                    f.fim_programa()                        
                 elif (verifica == 2):     
                     escolha_usuario = random.randrange(1, 31)
                     print(f"\nSeu exame está marcada para o dia {escolha_usuario} de Julho, {random.randrange(8, 18)}:{random.randrange(00, 59)} h.")
-                    
+                    f.fim_programa()
                 elif(verifica == 3):
                     check = 0
                  
@@ -324,10 +324,13 @@ while check == 0:
                 
                 if hora == 1:
                     print (f"\nExame {ex1} agendado em {data}/07 no horário {hora_dict[1]} com sucesso! Você receberá um SMS para a confirmação do seu agendamento.\n")
+                    f.fim_programa()
                 elif hora == 2:
                     print (f"\nExame {ex1} agendado em {data}/07 no horário {hora_dict[2]} com sucesso! Você receberá um SMS para a confirmação do seu agendamento.\n")
+                    f.fim_programa()
                 elif hora == 3:
                     print (f"\nExame {ex1} agendado em {data}/07 no horário {hora_dict[3]} com sucesso! Você receberá um SMS para a confirmação do seu agendamento.\n")
+                    f.fim_programa()
                 else:
                     None
                       
@@ -342,10 +345,13 @@ while check == 0:
 
                 if hora == 1:
                     print (f"\nExame {ex2} agendado em {data}/07 no horário {hora_dict[1]} com sucesso! Você receberá um SMS para a confirmação do seu agendamento.\n")
+                    f.fim_programa()
                 elif hora == 2:
                     print (f"\nExame {ex2} agendado em {data}/07 no horário {hora_dict[2]} com sucesso! Você receberá um SMS para a confirmação do seu agendamento.\n")
+                    f.fim_programa()
                 elif hora == 3:
                     print (f"\nExame {ex2} agendado em {data}/07 no horário {hora_dict[3]} com sucesso! Você receberá um SMS para a confirmação do seu agendamento.\n")
+                    f.fim_programa()
                 else:
                     hora = input(f'\nHorário não disponível. Escolha uma opção de horário: \n1 - {hr1} \n2 - {hr2} \n3 - {hr3} \n\nDigite aqui: ')        
             
@@ -360,10 +366,13 @@ while check == 0:
 
                 if hora == 1:
                     print (f"\nExame {ex3} agendado em {data}/07 no horário {hora_dict[1]} com sucesso! Você receberá um SMS para a confirmação do seu agendamento.\n")
+                    f.fim_programa()
                 elif hora == 2:
                     print (f"\nExame {ex3} agendado em {data}/07 no horário {hora_dict[2]} com sucesso! Você receberá um SMS para a confirmação do seu agendamento.\n")
+                    f.fim_programa()
                 elif hora == 3:
                     print (f"\nExame {ex3} agendado em {data}/07 no horário {hora_dict[3]} com sucesso! Você receberá um SMS para a confirmação do seu agendamento.\n")
+                    f.fim_programa()
                 else:
                     hora = input(f'\nHorário não disponível. Escolha uma opção de horário: \n1 - {hr1} \n2 - {hr2} \n3 - {hr3} \n\nDigite aqui: ')
                 
@@ -395,10 +404,13 @@ while check == 0:
                 
                 if infos_ubs == 1:
                     print('\nINFORMAÇÕES SOBRE A UBS 1\n\nEndereço: Rua dos Bobos, nº 0 \nTelefone: (00) 0000-0000 \nHorário de atendimento: 24 horas \n')
+                    f.fim_programa()
                 elif infos_ubs == 2:
                     print('\nINFORMAÇÕES SOBRE A UBS 2\n\nEndereço: Rua dos Bobos, nº 100 \nTelefone: (00) 0000-0000 \nHorário de atendimento: 24 horas \n')  
+                    f.fim_programa()
                 elif infos_ubs == 3:
-                    print('\nINFORMAÇÕES SOBRE A UBS 2\n\nEndereço: Rua dos Bobos, nº 200 \nTelefone: (00) 0000-0000 \nHorário de atendimento: 24 horas \n')                    
+                    print('\nINFORMAÇÕES SOBRE A UBS 2\n\nEndereço: Rua dos Bobos, nº 200 \nTelefone: (00) 0000-0000 \nHorário de atendimento: 24 horas \n')    
+                    f.fim_programa()                
                 else:
                     infos_ubs = input('\nEntrada inválida. Escolha a UBS que deseja informações: \n1 - UBS 1 \n2 - UBS 2 \n3 - UBS 3 \n\nDigite aqui: ')
 
@@ -413,12 +425,16 @@ while check == 0:
                 result_medi = ['a retirada do medicamento foi realizada com sucesso.', 'medicamento não disponível no momento.', 'a retirada do medicamento foi agendada com sucesso.']
                 if medicamento == 1:
                     print(f'\n{nome}, {random.choice(result_medi)} Você receberá um SMS com mais informações.')
+                    f.fim_programa()
                 elif medicamento == 2:
                     print(f'\n{nome}, {random.choice(result_medi)} Você receberá um SMS com mais informações')
+                    f.fim_programa()
                 elif medicamento == 3:
                     print(f'\n{nome}, {random.choice(result_medi)} Você receberá um SMS com mais informações')
+                    f.fim_programa()
                 else:
-                    print('\nEntrada inválida. Encerrando o programa.\n')
+                    print('\nEntrada inválida.\n')
+                    f.fim_programa()
                 
             elif dados == 3:
                 print('\nRETIRADA DE EXAMES\n')
@@ -432,12 +448,16 @@ while check == 0:
                 
                 if exames == 1:
                     print(f'\n{nome}, {random.choice(result_exames)} Você receberá um SMS com mais informações')
+                    f.fim_programa()
                 elif exames == 2:
                     print(f'\n{nome}, {random.choice(result_exames)} Você receberá um SMS com mais informações')
+                    f.fim_programa()
                 elif exames == 3:
                     print(f'\n{nome}, {random.choice(result_exames)} Você receberá um SMS com mais informações')
+                    f.fim_programa()
                 else:
-                    print('\nEntrada inválida. Encerrando o programa.\n')
+                    print('\nEntrada inválida.\n')
+                    f.fim_programa()
                     
             elif dados == 4:
                 check = 0
